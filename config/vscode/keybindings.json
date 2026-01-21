@@ -64,5 +64,15 @@
     {
         "key": "ctrl+k",
         "command": "workbench.action.navigateUp",
+    },
+        {
+        "key": "escape",
+        "command": "closeParameterHints",
+        "when": "editorTextFocus && parameterHintsVisible && vim.mode == 'Insert'"
+    },
+    {
+        "key": "escape",
+        "command": "hideSuggestWidget",
+        "when": "editorTextFocus && suggestWidgetVisible && vim.mode == 'Insert'"
     }
 ]
