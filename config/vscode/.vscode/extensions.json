@@ -1,12 +1,13 @@
 {
     "recommendations": [
+        //Ux
+        "vscodevim.vim",        
+        "oderwat.indent-rainbow",
         "esbenp.prettier-vscode",
-        "vscodevim.vim",
-        "Meezilla.json",
+        //Themes
         "fisheva.eva-theme",
         "mvllow.rose-pine",
         "teabyii.ayu",
-        "Equinusocio.vsc-material-theme",
         "wicked-labs.wvsc-serendipity",
         "sdras.inbedby7pm",
         "David-Moskovitz.winter-is-coming-one-dark-pro",
@@ -15,13 +16,26 @@
         "timx.ayu-modern",
         "Siris01.ayu-green",
         "LudoLoops.ayuTokyo",
-        "GrayJack.monokai-grayjack"
+        "GrayJack.monokai-grayjack",
+        "larxx.github-blue",
+        // Vue
+        "Vue.volar",
         //html
         "ecmel.vscode-html-css",
         "formulahendry.auto-complete-tag",
         "steoates.autoimport"
         // json
         "joshuapoehls.json-escaper",
-        "mohsen1.prettify-json"
+        "ClemensPeters.format-json",
+        "mohsen1.prettify-json",
+        "Meezilla.json"
+        // CSV
+        "mechatroner.rainbow-csv"
+        // Git
+        "mhutchie.git-graph",
+        "GitHub.vscode-pull-request-github",
+        "eamodio.gitlens",
+        // Project Manager
+        "alefragnani.project-manager"
     ]
 }
