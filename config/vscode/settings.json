@@ -83,9 +83,13 @@
             "before": ["<leader>", "s", "f"],
             "commands": ["workbench.view.search"]
         },
+        // {
+        //     "before": ["<leader>", "s", "g"],
+        //     "commands": ["workbench.panel.chat.view.copilot.focus"]
+        // },
         {
             "before": ["<leader>", "s", "g"],
-            "commands": ["workbench.panel.chat.view.copilot.focus"]
+            "commands": ["workbench.action.toggleAuxiliaryBar"]
         },
         {
             "before": ["<leader>", "s", "s"],
@@ -249,6 +253,7 @@
         }
 }
 }
+
 
 
 
