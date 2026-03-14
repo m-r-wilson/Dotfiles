@@ -1,7 +1,7 @@
 vim.g.mapleader=" "
 -- Set the characters for EasyMotion
 --vim.g.easymotion_smartcase = 1             -- Enable smart case sensitivity
-vim.g.easymotion_keys = 'asdfghjklqwertyuiop'        -- Specify the characters to use
+-- vim.g.easymotion_keys = 'asdfghjklqwertyuiop'        -- Specify the characters to use
 vim.opt.number=true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.relativenumber=true
@@ -22,12 +22,14 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
 vim.keymap.set('n', 'x', ':bd<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-\\>', ':vs<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', 'J', ':bp<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', 'K', ':bn<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', 'f', '<Plug>(easymotion-f)', { noremap = true, silent = true })
-vim.keymap.set('n', 'F', '<Plug>(easymotion-F)', { noremap = true, silent = true })
-vim.keymap.set('n', 'w', '<Plug>(easymotion-w)', { noremap = true, silent = true })
-vim.keymap.set('n', 'W', '<Plug>(easymotion-W)', { noremap = true, silent = true })
+vim.keymap.set('n', '[', ':bp<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', ']', ':bn<CR>', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v'}, 'f', '<Plug>(easymotion-f)', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v'}, 'F', '<Plug>(easymotion-F)', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v'}, 'W', '<Plug>(easymotion-w)', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v'}, 'B', '<Plug>(easymotion-b)', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v'}, 'J', '<Plug>(easymotion-j)', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v'}, 'K', '<Plug>(easymotion-k)', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>se', ':Explore<CR>', { noremap = false, silent = true })
 vim.keymap.set('n', '<leader>w', '<Plug>CamelCaseMotion_w', { noremap = false, silent = true })
 vim.keymap.set('n', '<leader>b', '<Plug>CamelCaseMotion_b', { noremap = false, silent = true })

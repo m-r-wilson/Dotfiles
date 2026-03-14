@@ -14,12 +14,12 @@
             "when": "editorTextFocus"
         },
         {
-            "before": ["J"],
+            "before": ["["],
             "commands": ["workbench.action.previousEditor"],
             "when": "editorTextFocus"
         },
         {
-            "before": ["K"],
+            "before": ["]"],
             "commands": ["workbench.action.nextEditor"],
             "when": "editorTextFocus"
         },
@@ -114,6 +114,22 @@
         {
             "before": ["F"],
             "after": ["<leader>", "<leader>", "F"]
+        },
+        {
+            "before": ["B"],
+            "after": ["<leader>", "<leader>", "w"]
+        },
+        {
+            "before": ["W"],
+            "after": ["<leader>", "<leader>", "b"]
+        },
+        {
+            "before": ["J"],
+            "after": ["<leader>", "<leader>", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["<leader>", "<leader>", "k"]
         }
     ],
     "vim.visualModeKeyBindings": [
@@ -124,6 +140,22 @@
         {
             "before": ["F"],
             "after": ["<leader>", "<leader>", "F"]
+        },
+        {
+            "before": ["B"],
+            "after": ["<leader>", "<leader>", "w"]
+        },
+        {
+            "before": ["W"],
+            "after": ["<leader>", "<leader>", "b"]
+        },
+        {
+            "before": ["J"],
+            "after": ["<leader>", "<leader>", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["<leader>", "<leader>", "k"]
         }
     ],
     "vim.insertModeKeyBindings": [
