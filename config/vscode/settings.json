@@ -107,6 +107,18 @@
             "before": ["<leader>", "s", "x"],
             "commands": ["workbench.view.extensions"]
         },
+		        {
+            "before": ["<leader>", "t"],
+            "after": ["z", "t"]
+        },
+        {
+            "before": ["<leader>", "m"],
+            "after": ["z", "z"]
+        },
+        {
+            "before": ["<leader>", "d"],
+            "after": ["z", "b"]
+        }
         {
             "before": ["f"],
             "after": ["<leader>", "<leader>", "f"]
