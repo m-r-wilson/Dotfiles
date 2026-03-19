@@ -273,6 +273,20 @@
     },
 	"css.enabledLanguages": ["html"], // Css intellisense in Html Extension
     "editor.suggest.snippetsPreventQuickSuggestions": true,
+	"editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "html"
+    },
+    "css.lint.unknownAtRules": "ignore",
+	"tailwind-fold.autoFold": false,
+	"aws.cloudformation.telemetry.enabled": false,
+    "redhat.telemetry.enabled": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.viewSessions.orientation": "stacked",
+    "remote.autoForwardPortsSource": "hybrid",
+    "claudeCode.preferredLocation": "panel",
     "editor.tokenColorCustomizations": {
         "[Ayu Mirage]": {
             "textMateRules": [
@@ -291,7 +305,7 @@
                 }
             ]
         }
-}
+	}
 }
 
 
