@@ -128,7 +128,7 @@
             "after": ["<leader>", "<leader>", "w"]
         },
         {
-            "before": ["<leader>", "b"],
+            "before": ["<leader>", "g"],
             "after": ["<leader>", "<leader>", "b"]
         },
         {
@@ -154,7 +154,7 @@
             "after": ["<leader>", "<leader>", "w"]
         },
         {
-            "before": ["<leader>", "b"],
+            "before": ["<leader>", "g"],
             "after": ["<leader>", "<leader>", "b"]
         },
         {
