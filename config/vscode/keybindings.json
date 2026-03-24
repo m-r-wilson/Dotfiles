@@ -84,32 +84,32 @@
     {
         "key": "enter b",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
     },
     {
         "key": "enter t",
         "command": "workbench.action.terminal.toggleTerminal",
-        "when": "vim.mode == 'Normal'"
+        "when": "vim.mode == 'Normal' && !inQuickOpen"
     },
     {
         "key": "enter f",
         "command": "workbench.action.quickOpen",
-        "when": "vim.mode == 'Normal' && editorTextFocus",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen",
         "args": "%"
     },
     {
         "key": "enter w",
         "command": "workbench.action.files.save",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
     },
     {
         "key": "enter x",
         "command": "workbench.action.closeActiveEditor",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
     },
     {
         "key": "enter q",
         "command": "workbench.action.closeWindow",
-        "when": "vim.mode == 'Normal' && editorTextFocus"
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
     }
 ]
