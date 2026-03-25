@@ -35,11 +35,6 @@
         "command": "workbench.action.showCommands"
     },
     {
-        "key": "ctrl+shift+i",
-        "command": "workbench.action.openQuickChat.copilot"
-        // "command": "workbench.panel.chat.view.copilot.focus"
-    },
-    {
         "key": "ctrl+h",
         "command": "workbench.action.navigateLeft",
     },
@@ -65,7 +60,7 @@
         "key": "ctrl+k",
         "command": "workbench.action.navigateUp",
     },
-        {
+    {
         "key": "escape",
         "command": "closeParameterHints",
         "when": "editorTextFocus && parameterHintsVisible && vim.mode == 'Insert'"
@@ -76,21 +71,42 @@
         "when": "editorTextFocus && suggestWidgetVisible && vim.mode == 'Insert'"
     },
     {
-        "key": "backspace",
-        "command": "vim.remap",
-        "when": "vim.mode == 'Normal'",
-        "args": { "after": ["a", "backspace"] }
-    },
-    {
         "key": "enter b",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
     },
     {
-        "key": "enter t",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "vim.mode == 'Normal' && !inQuickOpen"
+        "key": "enter z",
+        "command": "workbench.action.toggleZenMode",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
     },
+    {
+        "key": "enter e",
+        "command": "workbench.view.explorer",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter s",
+        "command": "workbench.view.scm",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter c",
+        "command": "runCommands",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen",
+        "args": {
+            "commands": [
+                "git.openChange",
+                "workbench.action.focusActiveEditorGroup"
+            ]
+        }
+    },
+    // {
+    //     "key": "enter t",
+    //     "command": "workbench.action.terminal.toggleTerminal",
+    //     "when": "vim.mode == 'Normal' && !inQuickOpen"
+    // },
+    // Experimental
     {
         "key": "enter f",
         "command": "workbench.action.quickOpen",
@@ -103,13 +119,77 @@
         "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
     },
     {
-        "key": "enter x",
-        "command": "workbench.action.closeActiveEditor",
+        "key": "enter a",
+        "command": "workbench.action.toggleAuxiliaryBar",
         "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+
+    // {
+    //     "key": "enter x",
+    //     "command": "workbench.action.closeActiveEditor",
+    //     "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    // },
+    {
+        "key": "enter x",
+        "command": "runCommands",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen",
+        "args": {
+            "commands": [
+                "workbench.action.closeActiveEditor",
+                "workbench.action.navigateBack"// when diffs are closed, this is needed to focus the editor
+            ]
+        }
     },
     {
         "key": "enter q",
         "command": "workbench.action.closeWindow",
         "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter g",
+        "command": "workbench.action.gotoSymbol",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter d",
+        "command": "editor.action.revealDefinition",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter r",
+        "command": "workbench.action.openRecent",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter h",
+        "command": "editor.action.showHover",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter k",
+        "command": "editor.action.rename",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter j",
+        "command": "editor.action.quickFix",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter u",
+        "command": "editor.action.goToReferences",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "listFocus"
+    },
+// Needs to stay at the end
+    {
+        "key": "enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\n" },
+        "when": "terminalFocus"
     }
 ]
