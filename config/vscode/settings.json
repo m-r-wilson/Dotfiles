@@ -62,7 +62,47 @@
         // {
         //     "before": ["<leader>", "s", "t"],
         //     "commands": ["workbench.action.toggleSidebarVisibility"]
-        // },
+        // },        
+        {
+            "before": ["<Esc>","["],
+            "after": ["v", "i", "["]
+        },
+        {
+            "before": ["<Esc>","]"],
+            "after": ["v", "a", "["]
+        },
+        {
+            "before": ["<Tab>","["],
+            "after": ["v", "i", "{"]
+        },
+        {
+            "before": ["<Tab>","]"],
+            "after": ["v", "a", "}"]
+        },
+        {
+            "before": ["<Tab>","9"],
+            "after": ["v", "i", "("]
+        },
+        {
+            "before": ["<Tab>","0"],
+            "after": ["v", "a", "("]
+        },
+        {
+            "before": ["<Esc>",";"],
+            "after": ["v", "i", "'"]
+        },
+        {
+            "before": ["<Esc>","'"],
+            "after": ["v", "a", "'"]
+        },
+        {
+            "before": ["<Tab>",";"],
+            "after": ["v", "i", "\""]
+        },
+        {
+            "before": ["<Tab>","'"],
+            "after": ["v", "a", "\""]
+        },
         {
             "before": ["["],
             "commands": ["workbench.action.previousEditor"],
@@ -122,6 +162,30 @@
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Tab>", "["],
+            "after": ["i", "{"]
+        },
+        {
+            "before": ["<Tab>", "]"],
+            "after": ["a", "}"],
+        },
+        {
+            "before": ["<Esc>","["],
+            "after": ["i", "{"],
+        },
+        {
+            "before": ["<Esc>","]"],
+            "after": ["a", "}"],
+        },
+        {
+            "before": ["<Tab>","9"],
+            "after": ["i", "("]
+        },
+        {
+            "before": ["<Tab>","0"],
+            "after": ["a", "("]
+        },
         {
             "before": ["f"],
             "after": ["<leader>", "<leader>", "f"]
