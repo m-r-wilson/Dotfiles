@@ -1,3 +1,4 @@
 {
-    "workbench.colorTheme": "Eva Light Italic Bold"
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "paddy-yesterday"
 }
