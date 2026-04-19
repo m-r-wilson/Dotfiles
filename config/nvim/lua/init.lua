@@ -20,13 +20,13 @@ vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
-
-vim.keymap.set('n', '<C-w>', ':bd<CR>', { noremap = true, silent = true })
+-- Check if no wait really works
+vim.keymap.set('n', '<C-w>', ':bd<CR>', { noremap = true, silent = true, nowait = true })
 vim.keymap.set('n', '<C-\\>', ':vs<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '[', ':bp<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', ']', ':bn<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '[', ':bp<CR>', { noremap = true, silent = true, nowait = true })
+vim.keymap.set('n', ']', ':bn<CR>', { noremap = true, silent = true, nowait = true })
 vim.keymap.set('n', '<CR>w', ':w<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<CR>q', ':q<CR>', { noremap = true, silent = true })
+-- vim.keymap.set('n', '<CR>q', ':q<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<CR>e', ':Explore<CR>', { noremap = true, silent = true })
 
 vim.keymap.set({'n', 'v'}, 'f', '<Plug>(easymotion-f)', { noremap = true, silent = true })
@@ -46,6 +46,14 @@ vim.keymap.set('n', '<Tab>n', function()
     vim.cmd('write')
   end
 end, { noremap = true, silent = true })
+
+-- Try later if this would work, this works but need to check other commands if they are slow or not
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = 'netrw',
+--   callback = function()
+--     vim.keymap.set('n', '<CR>q', ':q<CR>', { noremap = true, silent = true, nowait = true, buffer = true })
+--   end,
+-- })
 
 
 
