@@ -20,21 +20,20 @@ vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
-vim.keymap.set('n', 'x', ':bd<CR>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<C-w>', ':bd<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-\\>', ':vs<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '[', ':bp<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', ']', ':bn<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<CR>w', ':w<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<CR>q', ':q<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<CR>e', ':Explore<CR>', { noremap = true, silent = true })
+
 vim.keymap.set({'n', 'v'}, 'f', '<Plug>(easymotion-f)', { noremap = true, silent = true })
 vim.keymap.set({'n', 'v'}, 'F', '<Plug>(easymotion-F)', { noremap = true, silent = true })
--- vim.keymap.set({'n', 'v'}, '<leader>f', '<Plug>(easymotion-w)', { noremap = true, silent = true })
--- vim.keymap.set({'n', 'v'}, '<leader>g', '<Plug>(easymotion-b)', { noremap = true, silent = true })
 vim.keymap.set({'n', 'v'}, 'J', '<Plug>(easymotion-j)', { noremap = true, silent = true })
 vim.keymap.set({'n', 'v'}, 'K', '<Plug>(easymotion-k)', { noremap = true, silent = true })
-vim.keymap.set('n', '<CR>e', ':Explore<CR>', { noremap = false, silent = true })
--- vim.keymap.set({'n', 'v'}, '<leader>d', 'zb', { noremap = true, silent = true })
--- vim.keymap.set({'n', 'v'}, '<leader>t', 'zt', { noremap = true, silent = true })
--- vim.keymap.set({'n', 'v'}, '<leader>m', 'zz', { noremap = true, silent = true })
-vim.keymap.set('n', '<CR>w', ':w<CR>', { noremap = true, silent = true })
+
 vim.keymap.set('n', '<Tab>n', function()
   local input = vim.fn.input('New file: ')
   if input ~= '' then
@@ -47,9 +46,6 @@ vim.keymap.set('n', '<Tab>n', function()
     vim.cmd('write')
   end
 end, { noremap = true, silent = true })
--- vim.keymap.set('n', '<leader>f', '<Plug>CamelCaseMotion_w', { noremap = false, silent = true })
--- vim.keymap.set('n', '<leader>b', '<Plug>CamelCaseMotion_b', { noremap = false, silent = true })
--- vim.keymap.set('n', '<leader>e', '<Plug>CamelCaseMotion_e', { noremap = false, silent = true })
 
 
 
