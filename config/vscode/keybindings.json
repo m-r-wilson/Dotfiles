@@ -153,6 +153,21 @@
         "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
     },
     {
+        "key": "tab n",
+        "command": "extension.advancedNewFile", // extension id:"fayras.simple-new-file"
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "tab r",
+        "command": "fileutils.renameFile",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
+        "key": "tab d",
+        "command": "fileutils.removeFile",
+        "when": "vim.mode == 'Normal' && editorTextFocus && !inQuickOpen"
+    },
+    {
         "key": "enter",
         "command": "list.select",
         "when": "listFocus"
